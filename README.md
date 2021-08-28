@@ -9,3 +9,4 @@ a persistent znode stays within zookeeper until it is explicity deleted. Using a
 2. Run zkServer.cmd
 3. Run zkCli.cmd and write `create /election ""` then `ls /` and `get /election` to check if it was created.
 4. after running application in logs should be: `Succesfully connected to Zookeeper`
+5. At this point I am switching to linux
