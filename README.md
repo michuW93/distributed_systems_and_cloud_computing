@@ -12,3 +12,5 @@ a persistent znode stays within zookeeper until it is explicity deleted. Using a
 5. At this point I am switching to linux so instead of zkServer.cmd, need to run `./zkServer.sh start`. Be careful with: https://stackoverflow.com/a/58712936/4952262
 6. `mvn clean package` and `ava -jar distributed_systems_and_cloud_computing-1.0-SNAPSHOT-jar-with-dependencies.jar`
 7. ![alt text](https://github.com/michuW93/distributed_systems_and_cloud_computing/blob/master/two_instances_left_leader.png?raw=true)
+now leader is 005 when he dies 006 becomes a leader
+![alt text](https://github.com/michuW93/distributed_systems_and_cloud_computing/blob/master/two_instances_right_leader.png?raw=true)
