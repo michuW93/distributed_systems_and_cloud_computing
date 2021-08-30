@@ -19,9 +19,9 @@ public class LeaderElection implements Watcher {
     public static void main(String[] args) throws IOException, InterruptedException, KeeperException {
         System.out.println("LeaderElection");
         LeaderElection leaderElection = new LeaderElection();
+        leaderElection.connectToZookeper();
         leaderElection.volunteerForLeadership();
         leaderElection.electLeader();
-        leaderElection.connectToZookeper();
         leaderElection.run();
         leaderElection.close();
     }
@@ -40,8 +40,9 @@ public class LeaderElection implements Watcher {
 
         if (smallestChild.equals(currentZnodeName)){
             System.out.println("I'm leader");
+        } else {
+            System.out.println(smallestChild + " is the leader, I am not");
         }
-        System.out.println(smallestChild + " is the leader, I am not");
     }
 
     public void connectToZookeper() throws IOException {
